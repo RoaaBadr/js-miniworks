@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Article preview component</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <!-- Image -->
+      <div class="img">
+        <img src="./images/drawers.jpg" alt="drawers">
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="inner-text">
+          <!-- card Content -->
+          <h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+          <p>Ever been in a room and felt like something was missing?
+            Perhaps it felt slightly bare and uninviting. I've got some
+            simple tips to help you make any room feel complete.
+          </p>
+
+          <!-- Profile Section -->
+          <div class="profile">
+            <div class="profile-content">
+              <!-- Profile Image -->
+              <img src="./images/avatar-michelle.jpg" alt="avatar-michelle">
+              <!-- Profile info -->
+              <div class="info">
+                <h3>Michelle Appleton</h3>
+                <span>28 Jun 2020</span>
+              </div>
+            </div>
+
+            <!-- Share Button -->
+            <button class="share-icon">
+              <img src="./images/icon-share.svg" alt="icon-share">
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Outsider - share links list -->
+         <div class="social-links">
+          <div class="d-flex">
+            <span>share</span>
+            
+            <div class="links">
+              <li><img src="./images/icon-facebook.svg" alt="facebook icon"></li>
+              <li><img src="./images/icon-pinterest.svg" alt="pinterest icon"></li>
+              <li><img src="./images/icon-twitter.svg" alt="twitter icon"></li>
+            </div>
+          </div>
+          <div class="arrow"></div>
+         </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="card">
+    <div class="card-img">
+      <img src="./images/drawers.jpg" alt="drawers" width="285" height="282">
+    </div>
+
+    <div class="card-content">
+      <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+      <p>
+        Ever been in a room and felt like something was missing?
+        Perhaps it felt slightly bare and uninviting. I've got some
+        simple tips to help you make any room feel complete.
+      </p>
+      <div class="author">
+        <div class="author-container">
+          <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" width="35" height="35" class="rounded">
+          <div class="author-info">
+            <h4>Michelle Appleton</h4>
+            <p>28 Jun 2020</p>
+          </div>
+        </div>
+        <div class="share-container">
+          <button class="share-btn" id="share-btn">
+            <i class="fa-solid fa-share"></i>
+          </button>
+          <div class="tooltiptext">
+            <span>share</span>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <div class="arrow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <script>
+    const btn = document.querySelector('.share-icon')
+    const socialLinks = document.querySelector('.social-links')
+
+    btn.addEventListener('click', () => {
+      socialLinks.classList.toggle('active')
+
+      if(btn.classList.contains('share-icon-active')){
+        btn.classList.remove('share-icon-active', 'share-img-active')
+      } else {
+        btn.classList.add('share-icon-active', 'share-img-active')
+      }
+    })
+  </script>
+</body>
+
+</html>
