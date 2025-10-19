@@ -1,0 +1,139 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --grey-500: hsl(234, 12%, 34%);
+    --grey-400: hsl(212, 6%, 44%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    padding: 2rem;
+    justify-items: center;
+}
+
+/******/
+.intro {
+    justify-self: center;
+    text-align: center;
+    /*margin-bottom: 4rem;*/
+}
+
+.intro p {
+    color: var(--grey-500);
+    max-width: 550px;
+
+}
+
+.intro-title {
+    display: grid;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--grey-500);
+}
+
+.intro-title span {
+    color: var(--grey-400);
+    font-weight: 100;
+}
+
+/******/
+
+.grid-cards-container {
+    margin: 3.5rem 0;
+    display: grid;
+    grid-gap: 30px;
+    width: fit-content;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 9px 16px hsla(212, 51%, 52%, 0.203);
+}
+
+.end {
+    justify-self: end;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: small;
+    color: var(--grey-400);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: larger;
+    color: var(--grey-500);
+}
+
+.card img {
+    padding-top: 2rem;
+}
+
+/******/
+
+.cyan-card {
+    border-top: var(--cyan) solid 5px;
+}
+
+.red-card {
+    border-top: var(--red) solid 5px;
+}
+
+.blue-card {
+    border-top: var(--blue) solid 5px;
+}
+
+.orange-card {
+    border-top: var(--orange) solid 5px;
+}
+
+
+/******/
+@media (min-width: 775px) {
+    .grid-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            ".    s-red    ."
+            "s-cyan s-red    s-blue"
+            "s-cyan s-orange s-blue"
+            ".    s-orange ."
+        ;
+        justify-items: center;
+    }
+
+    .cyan-card {
+        grid-area: s-cyan;
+    }
+
+    .red-card {
+        grid-area: s-red;
+    }
+
+    .blue-card {
+        grid-area: s-blue;
+    }
+
+    .orange-card {
+        grid-area: s-orange;
+    }
+
+    .card {
+        max-width: 290px;
+    }
+}
