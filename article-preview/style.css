@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    background-color: bisque;
+    background-color: var(--light-color);
 }
 
 
@@ -49,7 +49,7 @@ span { display: inline-block; }
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;
 }
-.content .inner { padding-inline: 1rem; }
+.content .inner-text { padding-inline: 1rem; margin: 0 1rem; }
 .content h1 {
     color: var(--very-dark-color);
     font-weight: 800;
@@ -89,7 +89,7 @@ span { display: inline-block; }
     font-weight: 600; 
     font-size: 1.1rem;
 }
-.profile .info span { color: var(--dark-color); }
+.profile .info span { color: var(--ternary-color); }
 
 .share-icon {
     display: flex;
@@ -105,19 +105,20 @@ span { display: inline-block; }
     z-index: 10;
 }
 .share-icon img {
-    height: 23px;
-    width: 23px;
-    object-fit: cover;
+    height: 18px;
+    width: 18px;
 }
 
 .social-links {
     display: flex;
     align-items: center;
-    height: 100px;
+    text-align: center;
+    gap: 1rem;
+    height: 90px;
     width: 100%;
     position: absolute;
     bottom: -8rem;
-    padding-inline: 1rem;
+    padding-inline: 2.3rem;
     background-color: var(--very-dark-color);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -129,7 +130,8 @@ span { display: inline-block; }
     align-items: center;
     gap: 1rem;
 }
-.social-links span {
+
+.links span {
     color: var(--dark-color);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -137,13 +139,12 @@ span { display: inline-block; }
     font-size: 700;
 }
 
-
 .active {
     bottom: 0;
 }
 
 .share-icon-active {
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
 }
 .share-img-active img {
     filter: brightness(10);
