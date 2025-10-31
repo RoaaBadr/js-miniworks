@@ -78,7 +78,7 @@ button {
 
 li {
     list-style-type: none;
-    background-image: url('/assets/images/icon-list.svg');
+    background-image: url('./assets/images/icon-list.svg');
     background-repeat: no-repeat;
     background-position: 0 top;
     padding-left: 36px;
