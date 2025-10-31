@@ -22,7 +22,7 @@ form.addEventListener('submit', (e) => {
     error.textContent = ''
     email.className = "normal"
     main.style.display = "none"
-    modal.style.display = "block"
+    modal.style.display = "flex"
 })
 
 function validateEmail(email) {
