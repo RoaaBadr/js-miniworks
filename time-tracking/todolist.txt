@@ -1,0 +1,69 @@
+const container = document.getElementById('todos-container');
+
+const appendItem = (item) => {
+    // add the markup for each item to the DOM
+    const todo = document.createElement('LI');
+    todo.innerHTML = `
+    <span>${item.task}</span>
+    <input type="checkbox" ${item.completed ? 'checked' : ''} />
+  `
+    container.appendChild(todo);
+
+
+    //or 
+    // const appendItem = (item) => {
+    //         container.innerHTML += `<li>
+    //     <span>${item.task}</span>
+    //     <input type="checkbox" ${item.completed ? 'checked' : ''} />
+    //   </li>`;
+    //}
+};
+
+// append the data to the DOM
+const populateDOM = (data) => {
+    // with a forEach loop
+    data.forEach((item) => {
+        appendItem(item);
+    });
+
+    // this can also be written
+    data.forEach(appendItem);
+
+    // with a for ... of loop
+    for (const item of data) {
+        appendItem(item);
+    }
+}
+
+// fetch the JSON data
+fetch('todo.json').then((response) => {
+    if (!response.ok) return console.log('Oops! Something went wrong.');
+
+    return response.json();
+}).then((data) => {
+    // handle the data
+    populateDOM(data);
+});
+
+const toggleBtn = document.getElementById('toggle');
+
+const handleToggle = (e) => {
+  // determine whether to show or hide completed todos based on the button text
+  let displayAll = e.target.textContent === 'Show completed';
+
+  // filter the data array
+  const todosToDisplay = data.filter(item => {
+    // if we're showing completed todos, include all todos 
+    if(displayAll) return true;
+    // otherwise only include incomplete todos
+    return !item.completed;
+  });
+
+  // clear out the existing todos
+  container.innerHTML = '';
+  // repopulate the DOM with the filtered todos
+  todosToDisplay.forEach(appendItem);
+
+  // update the button text
+  e.target.textContent = displayAll ? 'Hide completed' : 'Show completed';
+}

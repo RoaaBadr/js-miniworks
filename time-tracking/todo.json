@@ -1,0 +1,5 @@
+[
+  { "task": "Wake up", "completed": true },
+  { "task": "Eat breakfast", "completed": false },
+  { "task": "Clean teeth", "completed": false }
+]
