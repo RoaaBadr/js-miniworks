@@ -1,0 +1,148 @@
+:root {
+    --orange-500: hsl(25, 97%, 53%);
+
+    --grey-500: hsl(217, 12%, 63%);
+    --grey-900: hsl(213, 19%, 18%);
+    --grey-950: hsl(216, 12%, 8%);
+}
+
+* {
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #141519;
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    margin: 2rem;
+    background: linear-gradient(45deg, rgb(30, 37, 46) 0%, var(--grey-900) 100%);
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 335px;
+    padding: 30px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: var(--grey-500);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-list button,
+.star-icon {
+    border-radius: 50%;
+    background: #262f38;
+
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+}
+
+.btn-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.btn-list button {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #7c8798;
+    font-weight: 700;
+}
+
+.btn-list button:hover {
+    background: var(--orange-500);
+    color: var(--grey-900);
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    background: var(--orange-500);
+    color: var(--grey-900);
+    font-weight: 700;
+
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.btn-list .active,
+.submit-btn:hover {
+    background: #fff;
+    color: var(--grey-900);
+}
+
+.hidden {
+    display: none;
+} 
+
+#thank-card {
+    text-align: center;
+}
+
+#thank-card img {
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+span {
+    color: var(--orange-500);
+    background: #262f38;
+    padding: 0.5rem 1.2rem;
+    display: inline-block;
+    border-radius: 30px;
+
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        max-width: 410px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
