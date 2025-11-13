@@ -18,7 +18,7 @@
 
   <main>
     <!-- Rating state start -->
-    <section id="rating-card" class="card">
+    <section id="rating-card" class="card" aria-labelledby="rating-title">
       <div class="star-icon">
         <img src="./images/icon-star.svg" alt="star icon">
       </div>
@@ -30,11 +30,11 @@
       </p>
 
       <div class="btn-list">
-        <button class="rating-btn">1</button>
-        <button class="rating-btn">2</button>
-        <button class="rating-btn">3</button>
-        <button class="rating-btn">4</button>
-        <button class="rating-btn">5</button>
+        <button class="rating-btn" aria-label="Rate 1 out of 5">1</button>
+        <button class="rating-btn" aria-label="Rate 2 out of 5">2</button>
+        <button class="rating-btn" aria-label="Rate 3 out of 5">3</button>
+        <button class="rating-btn" aria-label="Rate 4 out of 5">4</button>
+        <button class="rating-btn" aria-label="Rate 5 out of 5">5</button>
       </div>
 
       <button type="submit" class="submit-btn">submit</button>
@@ -42,13 +42,13 @@
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
-    <section id="thank-card" class="card hidden">
+    <section id="thank-card" class="card hidden" aria-labelledby="rating-title">
       <div class="thank-img">
       <img src="./images/illustration-thank-you.svg" alt="thank you illustration">
 
       </div>
 
-      <div class="show-rate">
+      <div class="show-rate" aria-live="polite">
       </div>
 
       <h1>Thank you!</h1>
