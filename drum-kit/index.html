@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrumKit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./code.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Reactive Soundboard</h1>
+            <p class="subtitle">
+                Click or press keys. Each button plays a short sound and animates the background.
+            </p>
+        </header>
+
+        <section>
+            <div class="card grid" id="key-list">
+                <button class="key" data-key="A" data-emoji="👏">A<span class="key-info">clap</span></button>
+                <button class="key" data-key="S" data-emoji="📀">S<span class="key-info">hihat</span></button>
+                <button class="key" data-key="D" data-emoji="🥁">D<span class="key-info">kick</span></button>
+                <button class="key" data-key="F" data-emoji="💿">F<span class="key-info">openhat</span></button>
+                <button class="key" data-key="G" data-emoji="💥">G<span class="key-info">boom</span></button>
+                <button class="key" data-key="H" data-emoji="🔥">H<span class="key-info">ride</span></button>
+                <button class="key" data-key="J" data-emoji="🥁">J<span class="key-info">snare</span></button>
+                <button class="key" data-key="K" data-emoji="🥢">K<span class="key-info">tom</span></button>
+                <button class="key" data-key="L" data-emoji="🤘">L<span class="key-info">tim</span></button>
+            </div>
+        </section>
+
+        <audio preload="auto" src="./assets/sounds/boom.wav" data-key="A"></audio>
+        <audio preload="auto" src="./assets/sounds/clap.wav" data-key="S"></audio>
+        <audio preload="auto" src="./assets/sounds/hihat.wav" data-key="F"></audio>
+        <audio preload="auto" src="./assets/sounds/openhat.wav" data-key="G"></audio>
+        <audio preload="auto" src="./assets/sounds/ride.wav" data-key="H"></audio>
+        <audio preload="auto" src="./assets/sounds/snare.wav" data-key="J"></audio>
+        <audio preload="auto" src="./assets/sounds/tink.wav" data-key="K"></audio>
+        <audio preload="auto" src="./assets/sounds/tom.wav" data-key="L"></audio>
+        <audio preload="auto" src="./assets/sounds/kick.wav" data-key="D"></audio>
+    </main>
+</body>
+
+</html>

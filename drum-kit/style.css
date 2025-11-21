@@ -1,0 +1,134 @@
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --accent: #7c3aed;
+    --text: #e6eef8;
+    --muted: #9fb0c8;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    background: linear-gradient(180deg, #071126 0%, #071a2a 60%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 1.25rem;
+    margin: 0
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 18px
+}
+
+button {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 18px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    user-select: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: .95rem;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.55);
+}
+
+.playing {
+    transform: scale(.98)
+}
+
+.playing {
+    box-shadow: 0 8px 22px rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.6)
+}
+
+button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 8px;
+    font-weight: 600;
+    display: block;
+
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: .95rem;
+}
+.key-info{
+    color: yellow;
+    font-size: 0.7rem;
+    display: block;
+    text-transform: uppercase;
+}
+
+.card {
+    width: min(960px, 98%);
+    max-width: 960px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.05));
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 40px rgba(2, 6, 23, 0.6);
+}
+
+.emoji {
+    position: fixed;
+    font-size: 22px;
+    pointer-events: none;
+    transform-origin: center;
+    will-change: transform, opacity;
+    z-index: 40
+}
+
+/* emoji base style */
+.emoji {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    font-size: 16px;
+    will-change: transform, opacity;
+    z-index: 9999;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .emoji {
+        transition: none !important;
+        animation: none !important;
+    }
+}
