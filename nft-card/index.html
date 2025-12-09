@@ -8,7 +8,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 
@@ -17,53 +16,31 @@
 
 <body>
   <main>
-    <article class="card">
-      <!-- NFT Image -->
-      <figure class="card__img">
-        <img 
-          src="./images/image-equilibrium.jpg" 
-          alt="Blue digital cube artwork titled 'Equilibrium #3429'" 
-        >
-      </figure>
+    <div class="card">
+      <div class="card__img">
+        <img src="./images/image-equilibrium.jpg" alt="Blue digital cube artwork titled 'Equilibrium #3429'">
+        <div class="card__overlay"><img src="./images/icon-view.svg" alt="view icon"></div>
+      </div>
 
       <div class="card__content">
-        <h1 class="card__title">Equilibrium #3429</h1>
-        <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
-
-        <!-- Price + Time left -->
+        <h1>Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
         <div class="card__cost" aria-label="NFT price and availability">
-          <p class="card__price">
-            <img 
-              src="./images/icon-ethereum.svg" 
-              alt="" 
-              aria-hidden="true"
-            >
-            <span>0.041 ETH</span>
-          </p>
-
-          <p class="card__time-left">
-            <img 
-              src="./images/icon-clock.svg" 
-              alt="" 
-              aria-hidden="true"
-            >
-            <span>3 days left</span>
-          </p>
-        </div>
-
-        <!-- Author -->
-        <footer class="card__author">
-          <img 
-            src="./images/image-avatar.png" 
-            alt="Avatar of creator Jules Wyvern"
-          >
           <p>
-            <span>Creation of</span> 
-            <a href="#" class="card__author-link">Jules Wyvern</a>
+            <img src="./images/icon-ethereum.svg" alt="ethereum icon">
+            0.041 ETH
           </p>
-        </footer>
+          <span>
+            <img src="./images/icon-clock.svg" alt="clock icon">
+            3 days left
+          </span>
+        </div>
+        <div class="card__author">
+          <img src="./images/image-avatar.png" alt="Avatar of creator Jules Wyvern">
+          <p><span>Creation of</span> Jules Wyvern</p>
+        </div>
       </div>
-    </article>
+    </div>
   </main>
 </body>
 
