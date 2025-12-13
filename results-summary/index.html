@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./scss/style.css">
+  <title>Results summary component</title>
+
+</head>
+
+<body>
+
+  <section class="grade">
+    <div class="grade__card">
+
+      <div class="result">
+        <p class="result__title">Your Result</p>
+
+        <div class="circle">
+          <span class="main-score">76</span>
+          <span class="total">of 100</span>
+        </div>
+
+        <h2>Great</h2>
+        <p class="result__text">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+
+      <div class="summary">
+        <h3>Summary</h3>
+
+        <ul class="summary__items">
+        </ul>
+        <button>Continue</button>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    let dataArr = []
+
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        dataArr = data
+        displayData()
+      })
+    const container = document.querySelector('ul.summary__items')
+    function displayData() {
+      dataArr.forEach(el => {
+
+        const cardEle = document.createElement('li')
+        cardEle.className = `item ${el.category.toLowerCase()}`;
+        cardEle.innerHTML =
+          `
+            <div class="title">
+              <img src="${el.icon}" alt="${el.category}">
+              <p>${el.category}</p>
+            </div>
+            <p class="score">${el.score} <span>/ 100</span></p>
+        `
+
+        container.appendChild(cardEle)
+      })
+    }
+  </script>
+</body>
+
+</html>

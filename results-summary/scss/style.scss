@@ -1,0 +1,225 @@
+$pale-blue: hsl(221, 100%, 96%);
+$light-lavender: hsl(241, 100%, 89%);
+$dark-gray-blue: hsl(224, 30%, 27%);
+
+$light-slate-blue: hsl(252, 100%, 67%);
+/*(background)*/
+$light-royal-blue: hsl(241, 81%, 54%);
+
+$violet-blue: hsla(256, 72%, 46%, 1);
+/*(circle)*/
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0;
+    background-color: $pale-blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%gradient-bg {
+    background: linear-gradient(to bottom,
+            $light-slate-blue,
+            $light-royal-blue );
+}
+
+.grade {
+    .grade__card {
+        border-radius: 1.5rem;
+        height: 100%;
+        background-color: #fff;
+
+        .result {
+            @extend %gradient-bg;
+            padding: 1rem;
+
+            color: #fff;
+            text-align: center;
+            border-radius: 0 0 1.5rem 1.5rem;
+
+            &__title {
+                opacity: 0.8;
+                margin-bottom: 30px;
+            }
+
+            .circle {
+                width: 140px;
+                height: 140px;
+                margin: 0 auto 30px;
+                border-radius: 50%;
+
+                background: linear-gradient(to bottom,
+                        $violet-blue,
+                        $persian-blue );
+
+                @extend %flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .main-score {
+                    font-size: 56px;
+                    font-weight: 800;
+                }
+
+                .total {
+                    opacity: 0.6;
+                    font-size: 14px;
+                }
+            }
+
+            h2 {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
+
+            &__text {
+                opacity: 0.75;
+                font-size: 15px;
+                line-height: 1.5;
+                padding: 0 3rem;
+            }
+        }
+
+        .summary {
+            margin: 2rem;
+
+            .summary__items {
+                padding: 0;
+
+                .item {
+                    padding: 0 1rem;
+                    border-radius: 0.6rem;
+                    margin-bottom: 1rem;
+                    font-weight: 700;
+
+                    @extend %flex;
+
+                    .title {
+                        @extend %flex;
+                        gap: 1rem;
+                    }
+
+                    .score {
+                        color: $dark-gray-blue;
+
+                        span {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+        width: 100%;
+        border-radius: 2rem;
+        border: none;
+        padding: 1rem;
+        color: #fff;
+        background-color: $dark-gray-blue;
+        cursor: pointer;
+
+        &:hover {
+            @extend %gradient-bg;
+        }
+    }
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    color: hsl(234, 85%, 45%);
+}
+
+@media (min-width: 768px) {
+    .grade {
+        .grade__card {
+            max-width: 680px;
+            height: 100%;
+            display: flex;
+
+            .result {
+                border-radius: 1.5rem;
+                width: 60%;
+
+                &__title {
+                    font-size: 1.1rem;
+                }
+
+                .circle {
+                    width: 190px;
+                    height: 190px;
+
+                    .main-score {
+                        font-size: 3.8rem;
+                    }
+
+                    .total {
+                        font-size: 1rem;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.5rem;
+                }
+
+                &__text {
+                    font-size: .9rem;
+                    padding: 0 1.99rem;
+                }
+            }
+
+            .summary {
+                width: 50%;
+                margin: 1.5rem;
+
+                .summary__items {
+                    margin: 1.5rem 0;
+                }
+
+                h3 {
+                    font-size: 1.4rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

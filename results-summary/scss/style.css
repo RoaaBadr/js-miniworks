@@ -1,0 +1,170 @@
+/*(background)*/
+/*(circle)*/
+html {
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  background-color: hsl(221, 100%, 96%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grade .grade__card .summary .summary__items .item .title, .grade .grade__card .summary .summary__items .item, .grade .grade__card .result .circle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grade button:hover, .grade .grade__card .result {
+  background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.grade .grade__card {
+  border-radius: 1.5rem;
+  height: 100%;
+  background-color: #fff;
+}
+.grade .grade__card .result {
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+.grade .grade__card .result__title {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+.grade .grade__card .result .circle {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  flex-direction: column;
+  justify-content: center;
+}
+.grade .grade__card .result .circle .main-score {
+  font-size: 56px;
+  font-weight: 800;
+}
+.grade .grade__card .result .circle .total {
+  opacity: 0.6;
+  font-size: 14px;
+}
+.grade .grade__card .result h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.grade .grade__card .result__text {
+  opacity: 0.75;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0 3rem;
+}
+.grade .grade__card .summary {
+  margin: 2rem;
+}
+.grade .grade__card .summary .summary__items {
+  padding: 0;
+}
+.grade .grade__card .summary .summary__items .item {
+  padding: 0 1rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.grade .grade__card .summary .summary__items .item .title {
+  gap: 1rem;
+}
+.grade .grade__card .summary .summary__items .item .score {
+  color: hsl(224, 30%, 27%);
+}
+.grade .grade__card .summary .summary__items .item .score span {
+  opacity: 0.5;
+}
+.grade button {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 2rem;
+  border: none;
+  padding: 1rem;
+  color: #fff;
+  background-color: hsl(224, 30%, 27%);
+  cursor: pointer;
+}
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+
+@media (min-width: 768px) {
+  .grade .grade__card {
+    max-width: 680px;
+    height: 100%;
+    display: flex;
+  }
+  .grade .grade__card .result {
+    border-radius: 1.5rem;
+    width: 60%;
+  }
+  .grade .grade__card .result__title {
+    font-size: 1.1rem;
+  }
+  .grade .grade__card .result .circle {
+    width: 190px;
+    height: 190px;
+  }
+  .grade .grade__card .result .circle .main-score {
+    font-size: 3.8rem;
+  }
+  .grade .grade__card .result .circle .total {
+    font-size: 1rem;
+  }
+  .grade .grade__card .result h2 {
+    font-size: 1.5rem;
+  }
+  .grade .grade__card .result__text {
+    font-size: 0.9rem;
+    padding: 0 1.99rem;
+  }
+  .grade .grade__card .summary {
+    width: 50%;
+    margin: 1.5rem;
+  }
+  .grade .grade__card .summary .summary__items {
+    margin: 1.5rem 0;
+  }
+  .grade .grade__card .summary h3 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
